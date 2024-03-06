@@ -5,13 +5,9 @@ oldinput = input
 
 def print(*argument):
     '''одновременно печатает введенную фразу в коде, и записывает эту фразу в тхт файл'''
-    if argument == ():
-        file.write('\n')
-        oldprint()
-    else:
-        argument = ' '.join(argument)
-        file.write(argument+'\n')
-        oldprint(argument)
+    argument = ' '.join(argument)
+    file.write(argument+'\n')
+    oldprint(argument)
 
 def input(argument):
     output = oldinput(argument)
