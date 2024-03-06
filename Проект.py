@@ -31,7 +31,7 @@ def printspace(time,separator,enters,sep = True):
 false_input = True
 
 
-
+print()
 print('Начало истории')
 printspace(0,'-',1)
 print('Наш герой - фермер. У него сгорели посевы. Ему срочно нужны деньги чтобы заплатить за обучение в ВШЭ, а взять их негде.')
