@@ -15,7 +15,7 @@ def print(*argument):
 
 def input(argument):
     output = oldinput(argument)
-    file.write(f'{argument}{output}')
+    file.write(f'{argument}{output}\n')
     return output
 
 def timesleep(seconds):
