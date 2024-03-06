@@ -1,3 +1,23 @@
+file = open('story.txt','w')
+
+oldprint = print 
+oldinput = input
+
+def print(*argument):
+    '''одновременно печатает введенную фразу в коде, и записывает эту фразу в тхт файл'''
+    if argument == ():
+        file.write('\n')
+        oldprint()
+    else:
+        argument = ' '.join(argument)
+        file.write(argument+'\n')
+        oldprint(argument)
+
+def input(argument):
+    output = oldinput(argument)
+    file.write(f'{argument}{output}')
+    return output
+
 def timesleep(seconds):
     for _ in range(23000000*seconds):
         i = 999999999//567
@@ -8,8 +28,9 @@ def printspace(time,separator,enters,sep = True):
     for _ in range(enters): print()
     timesleep(time)
 
-
 false_input = True
+
+
 
 
 printspace(0,'-',1)
@@ -38,11 +59,12 @@ elif choice_1 == '2':
     for i in range(len(rooms)):
         room = rooms[i]
         room_things = things_in_rooms[i]
-        print()
-        print(f'Герой заходит в комнату {room[-1]}')
+        print( )
+        print(f'Герой заходит в комнату {room[-1]}:')
         printspace(1,'',0)
         print(f'В комнате есть: {", ".join(room_things)}')
         things += input(f'Что положить в сумку?: ').split(', ')
+        print()
         
 
     if 'деньги' in things:
