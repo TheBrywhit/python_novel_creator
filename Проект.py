@@ -59,7 +59,7 @@ elif choice_1 == '2':
     for i in range(len(rooms)):
         room = rooms[i]
         room_things = things_in_rooms[i]
-        print( )
+        print()
         print(f'Герой заходит в комнату {room[-1]}:')
         printspace(1,'',0)
         print(f'В комнате есть: {", ".join(room_things)}')
